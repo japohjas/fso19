@@ -49,11 +49,12 @@ const App = () => {
       number: newNumber
     }
 
-    const names = persons.map(person => person.name)
-   
-    if (names.includes(newName) && 
-        window.confirm(`${newName} is already added to phonbook, replace the old number with a new one?`)) {
-      const person = persons.find(p => p.name.includes(newName))
+    // undefined on if lauseessa false
+    const ePerson = persons.find(p => p.name === newName)
+    console.log('ePerson', ePerson)
+
+    if (ePerson && window.confirm(`${newName} is already added to phonbook, replace the old number with a new one?`)) {
+      const person = persons.find(p => p.name === newName)
       personService
         .update(person.id, personObject)
         .then(returnedPerson => {
@@ -68,7 +69,7 @@ const App = () => {
         })
     }
 
-    if (names.includes(newName)) {
+    if (ePerson) {
       setNewName('')
       setNewNumber('')
       return

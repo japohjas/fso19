@@ -12,18 +12,28 @@
     },
     {
       "name": "helmi",
-      "number": "313",
+      "number": "313-313",
       "id": 4
-    },
-    {
-      "name": "Joulu Pukki",
-      "number": "112",
-      "id": 5
     },
     {
       "name": "irmeli",
       "number": "1234",
       "id": 6
+    },
+    {
+      "name": "jaakko",
+      "number": "123456",
+      "id": 7
+    },
+    {
+      "name": "Matti",
+      "number": "456789",
+      "id": 8
+    },
+    {
+      "name": "Aku Ankka",
+      "number": "987654",
+      "id": 9
     }
   ]
 }
